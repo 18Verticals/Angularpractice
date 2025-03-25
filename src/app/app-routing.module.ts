@@ -7,6 +7,7 @@ import { SignalsComponent } from './signals/signals.component';
 import { NgTemplateComponent } from './ng-template/ng-template.component';
 import { StudentComponent } from './student/student.component';
 import { MessageComponent } from './message/message.component';
+import { CrudComponent } from './crud/crud.component';
 
 const routes: Routes = [
   {path:'product',component:ProductComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'signal',component:SignalsComponent},
   {path:'ng-template',component:NgTemplateComponent},
   {path:'student',component:StudentComponent},
-  {path:'message',component:MessageComponent}
+  {path:'message',component:MessageComponent},
+  {path:'crud',component:CrudComponent},
 ];
 
 @NgModule({

@@ -13,7 +13,7 @@ import { SignalsComponent } from './signals/signals.component';
 import { NgTemplateComponent } from './ng-template/ng-template.component';
 import { StudentComponent } from './student/student.component';
 import { MessageComponent } from './message/message.component';
-
+import { CrudComponent } from './crud/crud.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +25,7 @@ import { MessageComponent } from './message/message.component';
     NgTemplateComponent,
     StudentComponent,
     MessageComponent,
+    CrudComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,98 @@
+<div class="container mt-4">
+  <h1 class="text-center mb-4">User CRUD Operations</h1>
+
+  <div class="card mb-4">
+    <div class="card-header">
+      <h3>Add New User</h3>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input
+            [(ngModel)]="newUser.name"
+            class="form-control"
+            placeholder="Name"
+          />
+        </div>
+        <div class="col-md-6 mb-3">
+          <input
+            [(ngModel)]="newUser.email"
+            class="form-control"
+            placeholder="Email"
+          />
+        </div>
+        <div class="col-md-12">
+          <button (click)="createUser()" class="btn btn-primary w-100">
+            Add User
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h5>User List</h5>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+              <button
+                class="btn btn-warning btn-sm me-2"
+                (click)="editUserUser(user)"
+              >
+                Edit
+              </button>
+              <button
+                class="btn btn-danger btn-sm"
+                (click)="deleteUser(user.id)"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div *ngIf="editUser" class="card mt-4">
+    <div class="card-header">
+      <h5>Edit User</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input
+            [(ngModel)]="editUser.name"
+            class="form-control"
+            placeholder="Name"
+          />
+        </div>
+        <div class="col-md-6 mb-3">
+          <input
+            [(ngModel)]="editUser.email"
+            class="form-control"
+            placeholder="Email"
+          />
+        </div>
+        <div class="col-md-12">
+          <button (click)="updateUser()" class="btn btn-success w-100">
+            Update User
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
