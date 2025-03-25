@@ -1,0 +1,12 @@
+<div>
+        <div class="col-3">
+            <div class="bg-primary p-3" *ngIf="isUserLoggedIn;  else notLogged">
+                {{loggedUserName}}
+            </div>
+            <ng-template #notLogged>
+                <div class="bg-primary p-3">
+                    <span>User not logged In.</span>
+                </div>
+            </ng-template>
+        </div>
+</div>

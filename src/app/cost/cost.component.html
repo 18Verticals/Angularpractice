@@ -1,0 +1,35 @@
+<div class="cost-container">
+    <h2>Cost List</h2>
+  
+    <form (submit)="addCost()">
+      <div>
+        <label for="name">Item Name:</label>
+        <input type="text" id="name" [(ngModel)]="newCost.name" name="name" required />
+      </div>
+      <div>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" [(ngModel)]="newCost.amount" name="amount" required />
+      </div>
+      <button type="submit">Add Cost</button>
+    </form>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+           <tr *ngFor="let cost of costs">
+            <td>{{cost.name}}</td>
+            <td>{{cost.amount}}</td>
+           </tr>
+        </tbody>
+    </table>
+  
+    <div>
+      <h3>Total Cost: {{ totalCost() }} Rs.</h3>
+    </div>
+  </div>
+  
